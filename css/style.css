@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+    background-color: #C1DEAE;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    padding-bottom: 20px;
+}
+
+.container{
+    margin: auto;
+    max-width: 1180px;
+    overflow: auto;
+    padding: 0 20px;
+
+}
+
+.text-primary{
+    color: red;
+}
+
+.text-secondary{
+    color: blue;
+}
+
+.text-tertiary{
+    color: orange;
+}
+
+.py-1{
+    padding: 10px 0;
+}
+.py-2{
+    padding: 20px 0;
+}
+.py-3{
+    padding: 30px 0;
+}
+
+.btn{
+    display: inline-block;
+    background: #1E3333;
+    color: #fff;
+    border: none;
+    padding: 13px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn:hover{
+    background: #f7c08a;
+    color: #1E3333;
+}
+
+.btn-light{
+    background: #f4f4f4;
+    color: #333;
+}
+
+.bg-light {
+    background: #f4f4f4;
+    color: #333; 
+}
+
+.bg-primary {
+    background: #f7c08a;
+    color: #333; 
+}
+
+.bg-dark{
+    background: #1E3333;
+    color: #fff;
+}
+
+.clr{
+    clear: both;
+}
+
+.current{
+    background: #f7c08a;
+}
+
+
+/* Navbar */
+
+#navbar{
+    /*position: fixed;
+    top: 0;
+    width: 100%;*/
+    background: #1E3333;
+    color: #fff;
+    overflow: auto;
+}
+
+#navbar a{
+    color: #fff;
+}
+
+#navbar h1{
+    float:left;
+    padding-top: 20px;
+}
+
+#navbar ul{
+    list-style: none;
+    float: right;
+}
+
+#navbar ul li{
+    float: left;
+}
+
+#navbar ul li a{
+    display: block;
+    padding: 20px;
+    text-align: center;
+    box-shadow: inset 0 0 0 0 #f7c08a;
+    color: white;
+ 
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    
+}
+
+#navbar ul li a:hover{
+    box-shadow: inset 100px 0 0 0 #f7c08a;
+  color: black;
+    
+}
+
+/* showcase*/
+
+#showcase{
+    background: url("https://images.pexels.com/photos/2593143/pexels-photo-2593143.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")  no-repeat center center/cover;
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#showcase .showcase-content{
+    color: #fff;
+    text-align: center;
+    padding-top: 170px;
+}
+
+#showcase .showcase-content h1{
+   font-size: 60px;
+   line-height: 1.2em;
+}
+
+#showcase .showcase-content p{
+    padding-bottom: 20px;
+    line-height: 1.7em;
+}
+
+/* Home Info*/
+#home-info{
+    height: 350px;
+}
+#home-info .info-img{
+    float: left;
+    background: url("https://images.pexels.com/photos/9645188/pexels-photo-9645188.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center/cover;
+    width: 50%;
+    height: 100%;
+}
+
+#home-info .info-content {
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 50px 30px ;
+    overflow: hidden;
+}
+
+#home-info .info-content p{
+    padding-bottom: 30px;
+}
+
+/* features*/
+
+.box{
+    
+    float: left;
+    width: 33.3%;
+    padding: 40px;
+    text-align: center;
+}
+
+.box i {
+    margin-bottom: 10px;
+    
+}
+
+/* Photo grid*/
+
+
+
+#placeVisit ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #placeVisit li {
+      gap: 10px;
+    height: 40vh;
+    flex-grow: 1;
+    position: relative;
+    transition: transform .2s;
+  }
+  
+  #placeVisit li:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+
+  }
+
+
+
+
+  #placeVisit li:last-child {
+    flex-grow: 10;
+  }
+  
+  #placeVisit img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+  
+
+  
+  @media (max-aspect-ratio: 1/1) {
+    #placeVisit li {
+      height: 30vh;
+    }
+  }
+  
+  
+  @media (max-height: 480px) {
+    #placeVisit li {
+      height: 80vh;
+    }
+  }
+  
+
+  
+  @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    #placeVisit ul {
+      flex-direction: row;
+    }
+  
+    #placeVisit li {
+      height: auto;
+      width: 100%;
+    }
+    #placeVisit img {
+      width: 100%;
+      max-height: 75vh;
+      min-width: 0;
+    }
+  }
+  #placeVisit ul li .text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+   
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  
+
+
+
+/*About*/
+
+#about-info .info-left{
+    float: left;
+    width: 50%;
+    min-height: 100%;
+
+}
+
+#about-info .info-right{
+    float: right;
+    display: block;
+    width: 50%;
+    min-height: 100%;
+
+}
+
+#about-info .info-right img{
+    display: block;
+    width: 60%;
+    margin: auto;
+    border-radius: 60%;
+
+
+}
+
+/*Famous guests*/
+#famous-guests {
+    height: 600px;
+    background: url("https://hotel.am/uploads/posts/2021-10/1633988471_rest-house-dilijan.jpg") no-repeat center center/cover;
+    padding-top: 100px;
+}
+
+ /* #famous-guests .guest{
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0
+
+}
+
+#famous-guests .guest img{
+    width: 100px;
+    float: left;
+    margin: auto;
+    margin-bottom: 10px;
+  margin-right: 20px;
+  border-radius: 50%;
+
+    
+
+}
+
+@media (max-width: 500px) {
+    #famous-guests {
+        text-align: center;
+    }
+    #famous-guests .guest img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+}  */
+
+
+
+#famous-guests .guest {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0
+  }
+  
+  #famous-guests .guest::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  #famous-guests .guest img {
+      width: 100px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+
+  
+  @media (max-width: 500px) {
+    #famous-guests .guest {
+        text-align: center;
+    }
+    #famous-guests .guest img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+  }
+
+  /* CONTACT FORM*/
+
+ 
+  
+
+
+
+ 
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #f7c08a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #1E3333;
+  }
+  
+  .containerContact {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: 50px;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
